@@ -1,0 +1,19 @@
+md5: 667de01c9588905e309ac5e9155bae06
+cmd: py .\src\split.py
+wdir: ..
+deps:
+- md5: 56d94e9ede181a71fc9513c260e8396d
+  path: src/split.py
+- md5: e90efcb83d69faf99fcab8b0255024de
+  path: data/creditcard.csv
+outs:
+- md5: e40987b58ccf1de64aeb10a5495dc44f
+  path: data/test.csv
+  cache: true
+  metric: false
+  persist: false
+- md5: 4344efeb15fd97ee4bda9031328f1cbc
+  path: data/train.csv
+  cache: true
+  metric: false
+  persist: false

@@ -1,0 +1,7 @@
+md5: cbd842a1ee4036fb7399d2dc568b5e50
+outs:
+- md5: e90efcb83d69faf99fcab8b0255024de
+  path: creditcard.csv
+  cache: true
+  metric: false
+  persist: false

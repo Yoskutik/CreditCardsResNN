@@ -1,0 +1,4 @@
+['remote "creditcard"']
+url = C:\Users\Yoskutik\AppData\Local\Temp/dvc-storage
+[core]
+remote = creditcard
