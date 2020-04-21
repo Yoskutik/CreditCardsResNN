@@ -1,7 +1,5 @@
 numpy
-matplotlib
 tensorflow
 scikit-learn
 pandas
 dvc
-joblib
