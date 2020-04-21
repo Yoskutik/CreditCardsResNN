@@ -1,14 +1,14 @@
-md5: 7fb4ac781759302be378b801a36ba6be
+md5: 58d968b25adb0424935bae1f9f62cc2f
 cmd: py .\src\train.py
 wdir: ..
 deps:
-- md5: 4344efeb15fd97ee4bda9031328f1cbc
+- md5: 4e09914d72241cf9c5cc9fe74f4f9ae4
   path: data/train.csv
-- md5: c7d2d6e3179d7d06dfe7960817f58af6
+- md5: 00b60bc4d54b48630193605d2001df9e
   path: src/train.py
 outs:
-- md5: 8f1dae2af81c02ba8d1ae40a8624055d
-  path: model.h5
+- md5: 5f40aa49965d4bb5071ef3e413a7a8e5
+  path: data/model.h5
   cache: true
   metric: false
   persist: false

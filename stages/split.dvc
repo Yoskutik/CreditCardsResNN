@@ -1,19 +1,24 @@
-md5: 667de01c9588905e309ac5e9155bae06
+md5: 9bb4c528bc7395f4a336c5d037fdef25
 cmd: py .\src\split.py
 wdir: ..
 deps:
-- md5: 56d94e9ede181a71fc9513c260e8396d
-  path: src/split.py
 - md5: e90efcb83d69faf99fcab8b0255024de
   path: data/creditcard.csv
+- md5: 8a97986731b5574871d5cbee6b6a22d8
+  path: src/split.py
 outs:
-- md5: e40987b58ccf1de64aeb10a5495dc44f
+- md5: a7a2bf3f4d9fc8fe1a6a204b74b7469b
   path: data/test.csv
   cache: true
   metric: false
   persist: false
-- md5: 4344efeb15fd97ee4bda9031328f1cbc
+- md5: 4e09914d72241cf9c5cc9fe74f4f9ae4
   path: data/train.csv
+  cache: true
+  metric: false
+  persist: false
+- md5: f2d2796f72fcf1e6bb5ea65a8b171222
+  path: data/scaler.pickle
   cache: true
   metric: false
   persist: false

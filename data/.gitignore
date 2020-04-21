@@ -1,4 +1,5 @@
 /creditcard.csv
-/test1.csv
 /train.csv
 /test.csv
+/model.h5
+/scaler.pickle

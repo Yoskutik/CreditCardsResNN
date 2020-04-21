@@ -21,12 +21,14 @@ dense_1 = layers.Dense(29, activation='relu')(
 )
 out = layers.Dense(1, activation='sigmoid')(dense_1)
 
+
 model = models.Model(input_0, out)
 model.compile(loss='binary_crossentropy', optimizer=optimizers.Adam(5e-4))
-history = model.fit(X, y, epochs=100, verbose=0)
+history = model.fit(X, y, epochs=300, verbose=0)
 
 y_pred = model.predict(X)
 print(f'Train accuracy:  {accuracy_score(y, np.where(y_pred > 0.5, 1, 0)):0.5f}')
 print(f'Train ROC AUC:   {roc_auc_score(y, y_pred):0.5f}')
 
 model.save('model.h5')
+model.save('data/model.h5')

@@ -1,13 +1,15 @@
-md5: 4b873426dcf2af37b30bd813c3b694c1
-cmd: py .\src\evaluate.py
+md5: 9515f590365e46835f3e8de2269fbc52
+cmd: py src/evaluate.py
 wdir: ..
 deps:
-- md5: e40987b58ccf1de64aeb10a5495dc44f
+- md5: cc66680e56506dfc84e4276a5b23126a
+  path: src/evaluate.py
+- md5: a7a2bf3f4d9fc8fe1a6a204b74b7469b
   path: data/test.csv
-- md5: 8f1dae2af81c02ba8d1ae40a8624055d
-  path: model.h5
+- md5: 5f40aa49965d4bb5071ef3e413a7a8e5
+  path: data/model.h5
 outs:
-- md5: b9e3979ada1caf782133130770270577
+- md5: 880823d2bacffee0592c2b174b94d900
   path: metrics.txt
   cache: true
   metric: true

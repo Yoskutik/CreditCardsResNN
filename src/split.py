@@ -1,10 +1,16 @@
 import pandas as pd
+import pickle
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import RobustScaler
 
 df = pd.read_csv('data/creditcard.csv')
 df = df.drop('Time', axis=1)
 
-df_train, df_test = train_test_split(df, train_size=0.2, stratify=df.Class)
+sc = RobustScaler()
+df[['Amount']] = sc.fit_transform(df[['Amount']])
+pickle.dump(sc, open("data/scaler.pickle", 'wb'))
+
+df_train, df_test = train_test_split(df, test_size=0.2, stratify=df.Class)
 
 df_test = df_test.sort_values(by=['Class'], ascending=False)
 df_test = df_test.iloc[:(df_test.Class == 1).sum() * 2]
