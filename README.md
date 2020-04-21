@@ -81,4 +81,16 @@ There is a visualisation of whole pipeline of __stages/evaluate.dvc__ below:
 </pre> 
 
 To reproduce the model and the evaluation process use: `dvc repro stages/evaluate.dvc`.
+
+---
+
+If you want to create a docker image use `docker build -t <tag> <project_folder>`. The image 
+will contain `src/classify.py` script. This script takes the following options as input:
+  - _-f [path]:_ Path to csv file, the data from which you want to classify;
+  - _-o [path]:_ If it is set than the output is written to a file located by _path_. Otherwise
+  prints the output in terminal.
+  - _-p_: If it is set outputs only predictions (0 or 1). Otherwise outputs the probability.
+
+To run docker container use:  
+`docker run -v <local_dir>:<container_dir> <tag> -f <container_dir>/<file.csv> -o <container_dir>/<out.txt> -p`
   
